@@ -6,6 +6,34 @@ namespace NodeInserts
 {
     internal class Program
     {
+        public static int IsBigger(Node<int> lis1, Node<int> lis2)
+        {
+            if (lis1 == null && lis2 == null)
+            {
+                return 0;
+            }
+            else if (lis1.GetValue() > lis2.GetValue() || lis2 == null)
+            {
+                return 1;
+            }
+            else if (lis1.GetValue() < lis2.GetValue()|| lis1==null)
+            {
+                return 2;
+            }
+            else
+            {
+                return IsBigger(lis1.GetNext(), lis2.GetNext());
+            }
+        }
+
+        public static void ReturnLastOfSeq(Node<int> lis1, Node<int> lis2)
+        {
+            if (lis1 != null && lis2 != null)
+            {
+
+            }
+        }
+
         public static int Func1(Node<int> lst, int k)
         {
             int countk = 0;
