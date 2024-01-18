@@ -1,8 +1,5 @@
 ﻿using NodeClass;
 using NodeInserts.Models;
-using System.ComponentModel.Design;
-using System.Runtime.InteropServices;
-using NodeInserts.Models;
 
 namespace NodeInserts
 {
