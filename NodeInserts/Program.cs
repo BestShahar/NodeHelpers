@@ -34,6 +34,39 @@ namespace NodeInserts
             }
         }
 
+        public static int Adj( Node<Domino> dominode, int num)
+        {
+            int counter = 0;
+            Node <Domino> d= dominode;
+            while (d != null)
+            {
+                if (d.GetValue().getFirstnum() == num|| d.GetValue().getSecondnum() == num)
+                {
+                    counter++;
+                   
+                }
+                d = d.GetNext();
+            }
+            return counter;
+        }
+
+         public static string Winner(Node<Participate> participates)
+        {
+            string winnersName = "";
+            double max = 0;
+            Node<Participate> p = participates;
+            while(p != null)
+            {
+                if (p.GetValue().Decrease() > max)
+                {
+                    max=p.GetValue().Decrease();
+                    winnersName = p.GetValue().GetName();
+                }
+                p=p.GetNext();
+            }
+            return winnersName;
+        }
+
         public static int Func1(Node<int> lst, int k)
         {
             int countk = 0;
